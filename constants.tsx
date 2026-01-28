@@ -14,7 +14,7 @@ import {
 } from 'lucide-react';
 import { Service, Step } from './types';
 
-export const WHATSAPP_LINK = "https://wa.me/971500000000?text=Hi%20LetaaX,%20I’d%20like%20to%20apply%20for%20a%20typing%20service.";
+export const WHATSAPP_LINK = "https://wa.me/918089922373?text=Hi%20LetaaX,%20I’d%20like%20to%20apply%20for%20a%20typing%20service.";
 
 export const SERVICES: Service[] = [
   {
