@@ -120,11 +120,25 @@ The output will be available in the `dist/` directory.
 
 This project is configured for deployment using **GitHub Pages**.
 
+### Deployment Workflow
+
+**Important:** This project has two separate update processes.
+
+#### 1. Updating Source Code (GitHub Repository)
+To save your changes to the GitHub codebase (for backup and collaboration):
+```bash
+git add .
+git commit -m "Your descriptive message"
+git push origin main
+```
+*Note: This DOES NOT update the live website.*
+
+#### 2. Updating Live Website (Public URL)
+To update the actual hosted website that users see:
 ```bash
 npm run deploy
 ```
-
-This command builds the application and publishes the production files to the `gh-pages` branch.
+*Note: This command builds the project and updates the `gh-pages` branch. The live site will update after a few minutes.*
 
 **Live URL:**  
 https://codeWithMuze.github.io/Letax/
