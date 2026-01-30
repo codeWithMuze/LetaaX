@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, WhatsApp } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Page } from '../types';
 
 interface NavbarProps {
@@ -39,29 +39,28 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, setActivePage }) => {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className={`fixed w-full z-50 transition-all duration-500 ease-in-out ${
-        scrolled ? 'bg-white/90 backdrop-blur-xl shadow-2xl shadow-black/5 py-3 border-b border-gray-100' : 'bg-transparent py-6'
-      }`}
+      className={`fixed w-full z-50 transition-all duration-500 ease-in-out ${scrolled ? 'bg-white/90 backdrop-blur-xl shadow-2xl shadow-black/5 py-4 border-b border-gray-100' : 'bg-transparent py-8'
+        }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         {/* Bilingual Premium Logo */}
-        <div 
+        <div
           className="flex items-center cursor-pointer group"
           onClick={() => handleNavClick(Page.Home)}
         >
           <div className="relative">
-            <div className="w-12 h-12 bg-[#0F7C5C] flex items-center justify-center rounded-2xl shadow-xl transform group-hover:scale-110 transition-all duration-500 overflow-hidden ring-4 ring-[#E6F4EF]">
-              <span className="text-white font-black text-2xl font-poppins relative z-10">L</span>
-              <div className="absolute top-0 right-0 w-6 h-6 bg-[#C9A24D]/30 -mr-3 -mt-3 rotate-45" />
+            <div className="w-14 h-14 bg-[#0F7C5C] flex items-center justify-center rounded-2xl shadow-xl transform group-hover:scale-110 transition-all duration-500 overflow-hidden ring-4 ring-[#E6F4EF]">
+              <span className="text-white font-black text-3xl font-poppins relative z-10">L</span>
+              <div className="absolute top-0 right-0 w-7 h-7 bg-[#C9A24D]/30 -mr-3 -mt-3 rotate-45" />
             </div>
-            <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-[#C9A24D] rounded-full border-2 border-white shadow-sm" />
+            <div className="absolute -bottom-1 -right-1 w-5 h-5 bg-[#C9A24D] rounded-full border-2 border-white shadow-sm" />
           </div>
-          
+
           <div className="ml-4 flex flex-col justify-center leading-none">
-            <span className="text-2xl font-black tracking-tighter font-poppins text-gray-900 transition-colors">
+            <span className="text-3xl font-black tracking-tighter font-poppins text-gray-900 transition-colors">
               LetaaX
             </span>
-            <span className="text-[11px] font-bold font-arabic mt-0.5 text-[#0F7C5C] opacity-80 uppercase tracking-widest">
+            <span className="text-xs font-bold font-arabic mt-0.5 text-[#0F7C5C] opacity-80 uppercase tracking-widest">
               ليتاكس للخدمات
             </span>
           </div>
@@ -74,11 +73,10 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, setActivePage }) => {
               <button
                 key={link.id}
                 onClick={() => handleNavClick(link.id)}
-                className={`text-[13px] font-black uppercase tracking-[0.1em] transition-all relative py-2 ${
-                  activePage === link.id
-                    ? 'text-[#0F7C5C]'
-                    : 'text-gray-900 hover:text-[#0F7C5C]'
-                }`}
+                className={`text-[13px] font-black uppercase tracking-[0.1em] transition-all relative py-2 ${activePage === link.id
+                  ? 'text-[#0F7C5C]'
+                  : 'text-gray-900 hover:text-[#0F7C5C]'
+                  }`}
               >
                 {link.label}
                 {activePage === link.id && (
@@ -90,11 +88,11 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, setActivePage }) => {
               </button>
             ))}
           </div>
-          
+
           <motion.a
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
-            href="https://wa.me/971500000000"
+            href="https://wa.me/918089922373"
             className="bg-[#0F7C5C] text-white px-8 py-3.5 rounded-2xl text-[13px] font-black uppercase tracking-widest hover:bg-[#0B5E46] transition-all shadow-xl shadow-[#0F7C5C]/20 flex items-center space-x-3"
           >
             <span>Apply Now</span>
@@ -102,8 +100,8 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, setActivePage }) => {
         </div>
 
         {/* Mobile Toggle */}
-        <button 
-          className="lg:hidden p-3 bg-gray-50 rounded-2xl shadow-inner active:scale-95 transition-transform" 
+        <button
+          className="lg:hidden p-3 bg-gray-50 rounded-2xl shadow-inner active:scale-95 transition-transform"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X className="text-gray-900 w-6 h-6" /> : <Menu className="text-gray-900 w-6 h-6" />}
@@ -124,16 +122,15 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, setActivePage }) => {
                 <button
                   key={link.id}
                   onClick={() => handleNavClick(link.id)}
-                  className={`text-left text-xl font-black uppercase tracking-widest ${
-                    activePage === link.id ? 'text-[#0F7C5C]' : 'text-gray-900'
-                  }`}
+                  className={`text-left text-xl font-black uppercase tracking-widest ${activePage === link.id ? 'text-[#0F7C5C]' : 'text-gray-900'
+                    }`}
                 >
                   {link.label}
                 </button>
               ))}
               <div className="h-px w-full bg-gray-100" />
               <a
-                href="https://wa.me/971500000000"
+                href="https://wa.me/918089922373"
                 className="bg-[#0F7C5C] text-white px-8 py-5 rounded-3xl font-black uppercase tracking-widest text-center block shadow-2xl shadow-[#0F7C5C]/20 text-lg"
               >
                 Apply / Enroll Now

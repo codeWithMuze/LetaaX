@@ -1,11 +1,11 @@
 
 import React from 'react';
-import { 
-  CreditCard, 
-  FileText, 
-  UserCheck, 
-  Briefcase, 
-  Stamp, 
+import {
+  CreditCard,
+  FileText,
+  UserCheck,
+  Briefcase,
+  Stamp,
   HelpCircle,
   Search,
   MessageSquare,

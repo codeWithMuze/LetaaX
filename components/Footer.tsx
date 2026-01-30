@@ -12,7 +12,7 @@ const Footer: React.FC<FooterProps> = ({ onNav }) => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
           <div className="space-y-6">
-            <div 
+            <div
               className="flex items-center cursor-pointer group"
               onClick={() => onNav(Page.Home)}
             >
@@ -48,7 +48,7 @@ const Footer: React.FC<FooterProps> = ({ onNav }) => {
             <ul className="space-y-4 text-sm text-gray-500">
               <li><a href="#" className="hover:text-[#0F7C5C] transition-colors font-medium">Privacy Policy</a></li>
               <li><a href="#" className="hover:text-[#0F7C5C] transition-colors font-medium">Terms & Conditions</a></li>
-              <li><a href="https://wa.me/971500000000" className="hover:text-[#0F7C5C] transition-colors font-medium">Contact Support</a></li>
+              <li><a href="https://wa.me/918089922373" className="hover:text-[#0F7C5C] transition-colors font-medium">Contact Support</a></li>
               <li><a href="#" className="hover:text-[#0F7C5C] transition-colors font-medium">FAQ</a></li>
             </ul>
           </div>
@@ -58,7 +58,7 @@ const Footer: React.FC<FooterProps> = ({ onNav }) => {
             <p className="text-sm text-gray-600 mb-6 leading-relaxed">
               Register your typing center and start receiving digital requests from thousands of users across Dubai.
             </p>
-            <button 
+            <button
               onClick={() => onNav(Page.ForCenters)}
               className="w-full bg-[#0F7C5C] text-white py-3 rounded-xl text-sm font-bold hover:bg-[#0B5E46] transition-colors shadow-sm"
             >
